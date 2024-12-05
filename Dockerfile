@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y shadowsocks-libev
 COPY config.json /etc/shadowsocks-libev/config.json
 
 # 运行 Shadowsocks 服务
-CMD ["ss-server", "-c", "/etc/shadowsocks-libev/config.json"]
+CMD ["ss-server", "-c", "/etc/shadowsocks-libev/config.json", "-p", "${PORT}"]
